@@ -17,6 +17,8 @@ COPY run.sh /opt/run.sh
 
 WORKDIR /opt
 
+RUN echo "umask 002" >> .bashrc
+
 ENTRYPOINT ["/bin/bash", "/opt/run.sh"]
 
 CMD ["root"]
